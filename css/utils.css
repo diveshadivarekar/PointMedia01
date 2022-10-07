@@ -1,17 +1,60 @@
 /* Style buttons */
 .btn_download {
-    background-color: DodgerBlue;
+  position: relative;
+  display: inline-block;
+  /*width: 125px;*/
+ /* height: 40px;*/
+    /*margin:0 0 0 77px;*/
+   
     border: none;
-    color: white;
-    padding: 0.5vw 1vh;
+    color:white;
+    padding: 0.5vh 1vw;
     cursor: pointer;
     font-size: 20px;
+   background-image:
+    linear-gradient(90deg,dodgerblue,#00eeffc2);
+    /*color: #151515;*/
+    
+  }
+  .btn_download::before,.btn_download::after{
+    --size: calc(100% + 15px);
+    content: '';
+    position:absolute;
+    inset: 50% 0 0 50%;
+    translate:-50% -50%;
+    pointer-events: none;
+    transition: scale 0.35s;
+
+  }
+
+  .btn_download::before{
+    width: var(--size);
+    height: 100%;
+    border-top:2px solid black;
+border-bottom: 2px solid black;
+scale: .25 1 ;
+
+  }
+  .btn_download::after{
+    width: 100%;
+    height: var(--size);
+    border-right:2px solid black;
+border-left: 2px solid black;
+scale: 1 .25;
   }
   
   /* Darker background on mouse-over */
-  .btn_download:hover {
-    background-color: RoyalBlue;
+  .btn_download:hover::before,
+    .btn_download:hover::after{
+      opacity: 1;
+      scale: 1;
+      border-radius: 3px;
+    /*background:black ;
+    border: 0px solid dodgerblue;
+    box-shadow: 0 0 7px 0 dodgerblue inset,0 0 7px 4px dodgerblue;*/  
+      
   }
+
 
 
   
@@ -153,5 +196,13 @@
     #card_height {
       height: 17vh;
     }  
+  }
+
+  #link{
+    padding:3px;
+    margin:0px 0 3px 6px;
+    text-decoration: none;
+    font-size: large;
+    text-transform: capitalize;
   }
   

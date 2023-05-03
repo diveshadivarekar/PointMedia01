@@ -1,208 +1,47 @@
-/* Style buttons */
-.btn_download {
-  position: relative;
+/* css for dark mode switch */
+.sun {
   display: inline-block;
-  /*width: 125px;*/
- /* height: 40px;*/
-    /*margin:0 0 0 77px;*/
-   
-    border: none;
-    color:white;
-    padding: 0.5vh 1vw;
-    cursor: pointer;
-    font-size: 20px;
-   background-image:
-    linear-gradient(90deg,dodgerblue,#00eeffc2);
-    /*color: #151515;*/
-    
-  }
-  .btn_download::before,.btn_download::after{
-    --size: calc(100% + 15px);
-    content: '';
-    position:absolute;
-    inset: 50% 0 0 50%;
-    translate:-50% -50%;
-    pointer-events: none;
-    transition: scale 0.35s;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url("../media/moon.png");
+  background-size: cover;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+  z-index: 100;
+}
+.moon {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url("../media/sun.png");
+  background-size: cover;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+  z-index: 100;
+}
 
-  }
+.dark-mode .sun {
+  display: none;
+}
+.dark-mode .moon {
+  display: inline-block;
+}
 
-  .btn_download::before{
-    width: var(--size);
-    height: 100%;
-    border-top:2px solid black;
-border-bottom: 2px solid black;
-scale: .25 1 ;
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.5s ease;
+}
 
-  }
-  .btn_download::after{
-    width: 100%;
-    height: var(--size);
-    border-right:2px solid black;
-border-left: 2px solid black;
-scale: 1 .25;
-  }
-  
-  /* Darker background on mouse-over */
-  .btn_download:hover::before,
-    .btn_download:hover::after{
-      opacity: 1;
-      scale: 1;
-      border-radius: 3px;
-    /*background:black ;
-    border: 0px solid dodgerblue;
-    box-shadow: 0 0 7px 0 dodgerblue inset,0 0 7px 4px dodgerblue;*/  
-      
-  }
-
-
-
-  
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 4; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-  }
-  
-  /* The Close Button */
-  .close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-  
-  body {
-    background-color: #f1f1f1;
-    /* padding: 20px; */
-    font-family: Arial;
-  }
-  
-  /* Center website */
-  .main {
-    max-width: 1000px;
-    margin: auto;
-  }
-  
-  h1 {
-    font-size: 50px;
-    word-break: break-all;
-  }
-  
-  .row {
-    margin: 10px -16px;
-  }
-  
-  /* Add padding BETWEEN each column */
-  .row,
-  .row > .column {
-    padding: 8px;
-  }
-  
-  /* Create three equal columns that floats next to each other */
-  .column {
-    float: left;
-    width: 33.33%;
-    display: none; /* Hide all elements by default */
-  }
-  
-  /* Clear floats after rows */ 
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  /* Content */
-  .content {
-    background-color: white;
-    padding: 10px;
-  }
-  
-  /* The "show" class is added to the filtered elements */
-  .show {
-    display: block;
-  }
-  
-  /* Style the buttons */
-  .btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: white;
-    cursor: pointer;
-  }
-  
-  .btn:hover {
-    background-color: #ddd;
-  }
-  
-  .btn.active {
-    background-color: #666;
-    color: white;
-  }
-
-  .progress-container {
-    position: fixed;
-    width: 100%;
-    height: 8px;
-    background: #ccc;
-    z-index: 5;
-  }
-  
-  .progress-bar {
-    height: 8px;
-    background: #04AA6D;
-    width: 0%;
-  }
-
-  .badge {
-    background-color: red;
-    color: white;
-    padding: 4px 8px;
-    text-align: center;
-    border-radius: 5px;
-  }
-  
-  #card_height{
-    height: 40vh;
-  }
-  @media screen and (max-width: 786px) and (min-width: 350px){
-    #card_height {
-      height: 17vh;
-    }  
-  }
-
-  #link{
-    padding:3px;
-    margin:0px 0 3px 6px;
-    text-decoration: none;
-    font-size: large;
-    text-transform: capitalize;
-  }
-  
+/* css for the body */
+body {
+  background-color: rgb(236, 236, 236);
+  color: #333;
+  transition: background-color 0.5s ease;
+}

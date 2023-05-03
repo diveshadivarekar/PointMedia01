@@ -1,0 +1,14 @@
+{
+
+" " : "https://dl.kookdownload.com/game/nintendo/Dragon-The-Bruce-Lee-Story%28www.kookdownload.com%29.zip",
+" " : "https://dl.kookdownload.com/game/nintendo/Final%20Fight%202%28www.kookdownload.com%29.zip",
+" " : "https://dl.kookdownload.com/game/nintendo/Final%20Fight%28www.kookdownload.com%29.zip",
+" " : "https://dl.kookdownload.com/game/nintendo/Final-Fight3%28www.kookdownload.com%29.zip",
+" " : "https://dl.kookdownload.com/game/nintendo/International-Superstar-Soccer-Deluxe%28www.kookdownload.com%29.zip",
+" " : "https://dl.kookdownload.com/game/nintendo/Lucky-Luke%28www.kookdownload.com%29.zip",
+" " : "https://dl.kookdownload.com/game/nintendo/Mask-The%28www.kookdownload.com%29.zip",
+" " : "https://dl.kookdownload.com/game/nintendo/Wild-Guns%28www.kookdownload.com%29.zip",
+" " : "https://dl.kookdownload.com/game/nintendo/mario-Games%28www.kookdownload.com%29.zip",
+" " : "https://dl.kookdownload.com/game/nintendo/snes9x-1.43Nintendo-win32www.kookdownload.com.zip"
+
+}

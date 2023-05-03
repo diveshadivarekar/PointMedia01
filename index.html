@@ -1,909 +1,164 @@
-
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Point Media</title>
-       
-        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <link rel="stylesheet" href="/css/snack.css">
-        <link rel="stylesheet" href="/css/utils.css">
-        <link rel="stylesheet" href="/css/style.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="media/favicon_io/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon_io/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon_io/favicon-16x16.png">
+  <link rel="manifest" href="media/favicon_io/site.webmanifest">
 
-        <style>
-            body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
-        </style>
-    </head>
-    
-<body class="w3-light-grey w3-content" style="max-width:1600px">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/utils.css">
+  <link rel="stylesheet" href="css/snack.css">
+  <link rel="stylesheet" href="css/logo_title.css">
+  <link rel="stylesheet" href="css/loader.css">
+  <link rel="stylesheet" href="css/cookie.css">
+  <link rel="stylesheet" href="css/social.css">
+  <link rel="stylesheet" href="css/goku.css">
 
-    <div class="progress-container">
-        <div class="progress-bar" id="myBar"></div>
-    </div> 
 
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar">
-    <br>
-  <div class="w3-container">
-    <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey" title="close menu">
-      <i class="fa fa-remove"></i>
-    </a>
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Rolls-Royce_Motor_Cars_logo.svg/1638px-Rolls-Royce_Motor_Cars_logo.svg.png" style="width:45%;" class="w3-round"><br><br>
-    <h4><b>Point Media 01</b></h4>
-    <p class="w3-text-grey">By Divesh & Vinayak</p>
-  </div>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8027026058295687"
+     crossorigin="anonymous"></script>
 
-  <div class="w3-bar-block">
-    <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i class="fa fa-th-large fa-fw w3-margin-right"></i>Top Features</a></li> 
-    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-  </div>
 
-  <div class="w3-panel w3-large">
-    <i class="fa fa-facebook-official w3-hover-opacity"></i>
-    <i class="fa fa-instagram w3-hover-opacity"></i>
-    <i class="fa fa-snapchat w3-hover-opacity"></i>
-    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
-    <i class="fa fa-twitter w3-hover-opacity"></i>
-    <i class="fa fa-linkedin w3-hover-opacity"></i>
-  </div>
+  <title>Point Media</title>
+</head>
 
-</nav>
+<body>
+  <!-- Made with ❤️ by Divesh and Vinayak -->
 
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
 
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:300px">
+  <div id="loader">
 
-  <!-- Header -->
-  <header id="portfolio">
-    <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Rolls-Royce_Motor_Cars_logo.svg/1638px-Rolls-Royce_Motor_Cars_logo.svg.png" style="width:65px;" class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a>
-    <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i class="fa fa-bars"></i></span>
-    <div class="w3-container">
-        <br>
-        <h4><span class="badge">New</span></h4>
-        <h1><b>Top Features</b></h1>
-    
-
-        <!--  for small screen user only one option is visible so, i think we can use movies option only for mobile phone users  -->
-        <div class="w3-section w3-bottombar w3-padding-16">
-
-            <span class="w3-margin-right">Filter:</span> 
-
-            <button class="w3-button w3-black" onclick="filterSelection('all')">ALL</button>
-
-            <button class="w3-button w3-white " onclick="filterSelection('movies')" ><i class="fa fa-film w3-margin-right" title="Movies" ></i>Movies</button>
-
-            <button class="w3-button w3-white w3-hide-small" onclick="filterSelection('games')" ><i class="fa fa-gamepad w3-margin-right" title="Games"></i>Games</button>
-
-            <button class="w3-button w3-white w3-hide-small" onclick="filterSelection('apps')" ><i class="fa fa-desktop w3-margin-right" title="Apps"></i>Apps</button>
-
+    <div aria-label="Orange and tan hamster running in a metal wheel" role="img" class="wheel-and-hamster">
+      <div class="wheel"></div>
+      <div class="hamster">
+        <div class="hamster__body">
+          <div class="hamster__head">
+            <div class="hamster__ear"></div>
+            <div class="hamster__eye"></div>
+            <div class="hamster__nose"></div>
+          </div>
+          <div class="hamster__limb hamster__limb--fr"></div>
+          <div class="hamster__limb hamster__limb--fl"></div>
+          <div class="hamster__limb hamster__limb--br"></div>
+          <div class="hamster__limb hamster__limb--bl"></div>
+          <div class="hamster__tail"></div>
         </div>
-    </div>
-  </header>
-    <!-- add this to every link download button -->
-
-    <!-- <button onclick="snackbar()">Show Snackbar</button>
-    <div id="snackbar">Divesh & Vinayak <br> Downloading... <br>  <button class="btn_download"><i class="fa fa-download"></i> Download</button></div> -->
-
-    <!-- <button class="btn_download"><i class="fa fa-download"></i> Download</button> -->
-
-
-    <!-- Trigger/Open The Modal -->
-    <!-- <button id="myBtn">Open Modal</button> -->
-
-    <!-- The Modal -->
-    <!-- <div id="myModal" class="modal"> -->
-
-    <!-- Modal content -->
-    <!-- <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+      </div>
+      <div class="spoke"></div>
     </div>
 
-    </div> -->
+  </div>
 
+  <div id="content">
+
+    <!-- The actual snackbar -->
     <div id="snackbar">
-        <span>Downloading ...</span>
+      Downloading....
+
     </div>
-    <!-- <div id="myBtnContainer">
-        <button class="btn active" onclick="filterSelection('all')"> Show all</button>
-        <button class="btn" onclick="filterSelection('nature')"> Nature</button>
-        <button class="btn" onclick="filterSelection('cars')"> Cars</button>
-        <button class="btn" onclick="filterSelection('people')"> People</button>
-    </div> -->
+
+    <!-- darkmode toggle switch -->
+    <div class="sun" onclick="toggleDarkMode()"></div>
+    <div class="moon" onclick="toggleDarkMode()"></div>
+
+    <!-- pointmedia logo and heading -->
+    <div id="logo" class="logo">
+      <img id="my-image" src="media/PM_LOGO.png" alt="pointmedia_logo">
+    </div>
+
+    <div class="loader">
+      <span>PointMedia</span>
+      <span>PointMedia</span>
+    </div>
+
+    <br><br>
+
+    <!-- search bar and result container  -->
+    <div class="search-container">
+      <input type="text" autocomplete="off" name="text" class="input search-input" placeholder="Search on Point Media"
+        id="searchInput">
+
+      <button class="search-button" id="searchButton">Search</button>
+    </div>
+    <div id="results" align="center"></div>
+
+    <h3 align="center" style="font-size: medium;">
+      Made with ❤️ by Divesh and Vinayak
+    </h3>
 
 
-    <!-- <span>
+    <!-- cookie card code here  -->
+    <div id="cook_card" class="cookie-card cookcard">
+      <span class="title">🍪 Cookie Notice</span>
+      <p class="description">We use cookies to ensure that we give you the best experience on our website. <a
+          href="https://diveshwebsite.000webhostapp.com/">Read cookies policies</a>. </p>
+      <div class="actions">
+        <button class="pref">
+          Manage your preferences
+        </button>
+        <button onclick="accept()" class="accept" id="accept">
+          Accept
+        </button>
+      </div>
+    </div>
 
-      <button onclick="snackbar()" class="btn_download"  id="link"><a href="#" id="link">part 1</a></button>
-      <button onclick="snackbar()" class="btn_download"  id="link"><a href="#" id="link">part 2</a></button>
-      <button onclick="snackbar()" class="btn_download"  id="link"><a href="#" id="link">part 3</a></button>
-      <button onclick="snackbar()" class="btn_download"  id="link"><a href="#" id="link">part 4</a></button>
-      
+  </div>
+  <div class="notification">
+    <div id="goku">
+      <div class="head"></div>
+      <div class="body"></div>
+      <div class="leg"></div>
+      <div class="shadow"></div>
+    </div>
+
+    <span class="dirt">
+
+      <div class="text">
+        <span class="font hover"><b>Pointmedia</b></span>
+        <span class="font-text hover">Your power:</span>
+        <span class="font-power hover">
+          <p style="font-size: 10px;" id="result"></p>
+        </span>
+      </div>
+      <div class="parchment">
+      </div>
     </span>
-   -->
-
-  <div class="slideshow-container">
-
-    <div class="mySlides fade">
-      <div class="numbertext">1 / 3</div>
-
-      <div class="row">
-
-        <div class="column games">
-          <div class="content">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA V" style="width:100%"id ="card_height">
-            <h4>Grand Theft Auto V</h4>
-            <span>
-
-              <button onclick="snackbar()" class="btn_download"  id="link"><a href="https://dl.kookdownload.com/game/computer/Grand.Theft.Auto.V.FitGirl%28www.kookdownload.com%29.part1.rar" id="link">part 1</a></button>
-              <button onclick="snackbar()" class="btn_download"  id="link"><a href="#" id="link">part 2</a></button>
-              <button onclick="snackbar()" class="btn_download"  id="link"><a href="#" id="link">part 3</a></button>
-              <button onclick="snackbar()" class="btn_download"  id="link"><a href="#" id="link">part 4</a></button>
-              
-            </span>
-            <!-- <a href="https://dl.kookdownload.com/game/computer/Grand.Theft.Auto.V.FitGirl%28www.kookdownload.com%29.part1.rar">
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-            </a> -->
-          </div>
-        </div>
-    
-        <div class="column games">
-            <div class="content">
-              <img src="https://upload.wikimedia.org/wikipedia/en/6/6e/Alien_Isolation.jpg" alt="Alien_Isolation" style="width:100%" id ="card_height">
-              <h4>Alien Isolation</h4>
-              <button onclick="snackbar()" class="btn_download" ><i class="fa fa-download"></i> Download</button>
-              
-            </div>
-        </div>
-        <div class="column movies">
-          <div class="content">
-            <img src="https://m.media-amazon.com/images/M/MV5BMTc0Mzc2OTQ0Ml5BMl5BanBnXkFtZTgwOTQ5MjE4MDI@._V1_.jpg" alt="GTA V" style="width:100%" id ="card_height">
-            <h4>Resident Evil</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-    
-          </div>
-        </div>
-        <div class="column movies">
-          <div class="content">
-            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQA_-tL18_rj9zEcjN6n41NEaJm-kRNF9UeOtvksZ4z_OW6jRA9" alt="GTA V" style="width:100%" id ="card_height">
-            <h4>Avengers End Game</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-          </div>
-        </div>
-        <div class="column movies">
-          <div class="content">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ5IuxfEt-WmUIrpJldszdRJFfTubSEeQVMVNuv63Z0PNfvbWV" alt="GTA V" style="width:100%" id ="card_height">
-            <h4>Doctor Strange in the Multiverse</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-          </div>
-        </div>
-        <div class="column movies">
-          <div class="content">
-            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQtU4DiRFRr0155DjcHlSsgJy9opzt_MPMJmHfG4MEa31-A82Xb" alt="GTA V" style="width:100%" id ="card_height">
-            <h4>Spider-Man: No Way Home</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-          </div>
-        </div>
-        <div class="column movies">
-          <div class="content">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVZ5pdPcQ6LCKMk_JWiK0UfHViF5afN7VLWYfB8A1BkOXNrvC6" alt="GTA V" style="width:100%" id ="card_height">
-            <h4>Jurassic World Dominion</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-          </div>
-        </div>
-        <div class="column movies">
-          <div class="content">
-            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRLeDZOOOe39EylZoDSJteMkbX8lqS4JT-SvEZ8W2M6s1DRBZMd" alt="GTA V" style="width:100%" id ="card_height">
-            <h4>Top Gun: Maverick</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-          </div>
-        </div>
-        <div class="column movies">
-          <div class="content">
-            <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTCR9FSMDFVM4V_l6fcJRssT-oPvAyDpjqAxZWYTyySqKh7RgLL" alt="GTA V" style="width:100%" id ="card_height">
-            <h4>The Gray Man</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-          </div>
-        </div>
-        <div class="column movies">
-          <div class="content">
-            <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSlqKqkW0oljnsL6r__e2RL1bJbPc6J_BYu2S8jbqTmvfVY4rtZ" alt="GTA V" style="width:100%" id ="card_height">
-            <h4>Morbius</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-          </div>
-        </div>
-        <div class="column movies">
-          <div class="content">
-            <img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRZfkv9Cfpqc0MHSWj9pMEH_mOMboeAwx5ph4HjwTUw5rF4NfLw" alt="GTA V" style="width:100%" id ="card_height">
-            <h4>The Black Phone</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-          </div>
-        </div>
-       
-    
-        
-      </div>
-    </div>
-    
-    <div class="mySlides fade">
-      <div class="numbertext">2 / 3</div>
-      <div class="row">
-        <div class="column games">
-          <div class="content">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA V" style="width:100%"id ="card_height">
-            <h4>GTA V</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-            
-          </div>
-      </div>
-
-      
-
-    <div class="column games">
-        <div class="content">
-          <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA V" style="width:100%"id ="card_height">
-          <h4>GTA V</h4>
-          <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-          
-        </div>
-    </div>
-        
-        <div class="column games">
-          <div class="content">
-            <img src="/w3images/cars1.jpg" alt="games" style="width:100%">
-            <h4>Retro</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column cars">
-          <div class="content">
-          <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
-            <h4>Fast</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column cars">
-          <div class="content">
-          <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
-            <h4>Classic</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-      
-        <div class="column people">
-          <div class="content">
-            <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
-            <h4>Girl</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column people">
-          <div class="content">
-          <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
-            <h4>Man</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column people">
-          <div class="content">
-          <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
-            <h4>Woman</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="mySlides fade">
-      <div class="numbertext">3 / 3</div>
-      <div class="row">
-
-        <div class="column games">
-          <div class="content">
-            <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA V" style="width:100%">
-            <h4>GTA V</h4>
-            <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-    
-          </div>
-        </div>
-    
-        <div class="column games">
-            <div class="content">
-              <img src="https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png" alt="GTA V" style="width:100%">
-              <h4>GTA V</h4>
-              <button onclick="snackbar()" class="btn_download"><i class="fa fa-download"></i> Download</button>
-              
-            </div>
-        </div>
-    
-        <div class="column nature">
-          <div class="content">
-          <img src="/w3images/lights.jpg" alt="Lights" style="width:100%">
-            <h4>Lights</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column nature">
-          <div class="content">
-          <img src="/w3images/nature.jpg" alt="Nature" style="width:100%">
-            <h4>Forest</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        
-        <div class="column games">
-          <div class="content">
-            <img src="/w3images/cars1.jpg" alt="games" style="width:100%">
-            <h4>Retro</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column cars">
-          <div class="content">
-          <img src="/w3images/cars2.jpg" alt="Car" style="width:100%">
-            <h4>Fast</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column cars">
-          <div class="content">
-          <img src="/w3images/cars3.jpg" alt="Car" style="width:100%">
-            <h4>Classic</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-      
-        <div class="column people">
-          <div class="content">
-            <img src="/w3images/people1.jpg" alt="Car" style="width:100%">
-            <h4>Girl</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column people">
-          <div class="content">
-          <img src="/w3images/people2.jpg" alt="Car" style="width:100%">
-            <h4>Man</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-        <div class="column people">
-          <div class="content">
-          <img src="/w3images/people3.jpg" alt="Car" style="width:100%">
-            <h4>Woman</h4>
-            <p>Lorem ipsum dolor..</p>
-          </div>
-        </div>
-      </div>
-      <div class="text">Caption Three</div>
-    </div>
-    
-    
-    </div>
-    <br>
-    
-    <div style="text-align:center">
-      <button class="w3-bar-item w3-button w3-hover-black" onclick="plusSlides(-1)">«</button>
-      <span class="dot" onclick="currentSlide(1)"></span> 
-      <span class="dot" onclick="currentSlide(2)"></span> 
-      <span class="dot" onclick="currentSlide(3)"></span> 
-      <button  class="w3-bar-item w3-button w3-hover-black" onclick="plusSlides(1)" >»</button>
-    </div>
-    
-  <!-- top games -->
-  <!-- First Photo Grid-->
-  <div class="w3-row-padding">
-    <h2><b> Top Games</b></h2>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Second Photo Grid -->
-  <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
   </div>
 
 
-  <!-- top movies -->
-  <!-- <div class="w3-row-padding">
-    <h2><b> Top Movies</b></h2>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-  </div> -->
-  
-  <!-- Second Photo Grid-->
-  <!-- <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-  </div> -->
 
-  <!-- top apps -->
-  <!-- <div class="w3-row-padding">
-    <h2><b> Top Apps</b></h2>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/mountains.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-  </div> -->
-  
-  <!-- Second Photo Grid-->
-  <!-- <div class="w3-row-padding">
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container w3-margin-bottom">
-      <img src="/w3images/p2.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
-    <div class="w3-third w3-container">
-      <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
-      <div class="w3-container w3-white">
-        <p><b>Lorem Ipsum</b></p>
-        <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      </div>
-    </div>
+  <!-- <div class="card">
+    <span>Social</span>
+    <a class="social-link" href="#">
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 461.001 461.001" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path style="fill:#F61C0D;" d="M365.257,67.393H95.744C42.866,67.393,0,110.259,0,163.137v134.728 c0,52.878,42.866,95.744,95.744,95.744h269.513c52.878,0,95.744-42.866,95.744-95.744V163.137 C461.001,110.259,418.135,67.393,365.257,67.393z M300.506,237.056l-126.06,60.123c-3.359,1.602-7.239-0.847-7.239-4.568V168.607 c0-3.774,3.982-6.22,7.348-4.514l126.06,63.881C304.363,229.873,304.298,235.248,300.506,237.056z"></path> </g> </g></svg>
+    </a>
+    <a class="social-link" href="#">
+      <svg fill="#000000" viewBox="0 0 512 512" id="icons" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M412.19,118.66a109.27,109.27,0,0,1-9.45-5.5,132.87,132.87,0,0,1-24.27-20.62c-18.1-20.71-24.86-41.72-27.35-56.43h.1C349.14,23.9,350,16,350.13,16H267.69V334.78c0,4.28,0,8.51-.18,12.69,0,.52-.05,1-.08,1.56,0,.23,0,.47-.05.71,0,.06,0,.12,0,.18a70,70,0,0,1-35.22,55.56,68.8,68.8,0,0,1-34.11,9c-38.41,0-69.54-31.32-69.54-70s31.13-70,69.54-70a68.9,68.9,0,0,1,21.41,3.39l.1-83.94a153.14,153.14,0,0,0-118,34.52,161.79,161.79,0,0,0-35.3,43.53c-3.48,6-16.61,30.11-18.2,69.24-1,22.21,5.67,45.22,8.85,54.73v.2c2,5.6,9.75,24.71,22.38,40.82A167.53,167.53,0,0,0,115,470.66v-.2l.2.2C155.11,497.78,199.36,496,199.36,496c7.66-.31,33.32,0,62.46-13.81,32.32-15.31,50.72-38.12,50.72-38.12a158.46,158.46,0,0,0,27.64-45.93c7.46-19.61,9.95-43.13,9.95-52.53V176.49c1,.6,14.32,9.41,14.32,9.41s19.19,12.3,49.13,20.31c21.48,5.7,50.42,6.9,50.42,6.9V131.27C453.86,132.37,433.27,129.17,412.19,118.66Z"></path></g></svg>
+    </a>
+    <a class="social-link" href="#">
+      <svg viewBox="0 -28.5 256 256" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g> <path d="M216.856339,16.5966031 C200.285002,8.84328665 182.566144,3.2084988 164.041564,0 C161.766523,4.11318106 159.108624,9.64549908 157.276099,14.0464379 C137.583995,11.0849896 118.072967,11.0849896 98.7430163,14.0464379 C96.9108417,9.64549908 94.1925838,4.11318106 91.8971895,0 C73.3526068,3.2084988 55.6133949,8.86399117 39.0420583,16.6376612 C5.61752293,67.146514 -3.4433191,116.400813 1.08711069,164.955721 C23.2560196,181.510915 44.7403634,191.567697 65.8621325,198.148576 C71.0772151,190.971126 75.7283628,183.341335 79.7352139,175.300261 C72.104019,172.400575 64.7949724,168.822202 57.8887866,164.667963 C59.7209612,163.310589 61.5131304,161.891452 63.2445898,160.431257 C105.36741,180.133187 151.134928,180.133187 192.754523,160.431257 C194.506336,161.891452 196.298154,163.310589 198.110326,164.667963 C191.183787,168.842556 183.854737,172.420929 176.223542,175.320965 C180.230393,183.341335 184.861538,190.991831 190.096624,198.16893 C211.238746,191.588051 232.743023,181.531619 254.911949,164.955721 C260.227747,108.668201 245.831087,59.8662432 216.856339,16.5966031 Z M85.4738752,135.09489 C72.8290281,135.09489 62.4592217,123.290155 62.4592217,108.914901 C62.4592217,94.5396472 72.607595,82.7145587 85.4738752,82.7145587 C98.3405064,82.7145587 108.709962,94.5189427 108.488529,108.914901 C108.508531,123.290155 98.3405064,135.09489 85.4738752,135.09489 Z M170.525237,135.09489 C157.88039,135.09489 147.510584,123.290155 147.510584,108.914901 C147.510584,94.5396472 157.658606,82.7145587 170.525237,82.7145587 C183.391518,82.7145587 193.761324,94.5189427 193.539891,108.914901 C193.539891,123.290155 183.391518,135.09489 170.525237,135.09489 Z" fill="#5865F2" fill-rule="nonzero"> </path> </g> </g></svg>
+    </a>
+    <a class="social-link" href="#">
+      <svg fill="#000000" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M488.1 414.7V303.4L300.9 428l83.6 55.8zm254.1 137.7v-79.8l-59.8 39.9zM512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm278 533c0 1.1-.1 2.1-.2 3.1 0 .4-.1.7-.2 1a14.16 14.16 0 0 1-.8 3.2c-.2.6-.4 1.2-.6 1.7-.2.4-.4.8-.5 1.2-.3.5-.5 1.1-.8 1.6-.2.4-.4.7-.7 1.1-.3.5-.7 1-1 1.5-.3.4-.5.7-.8 1-.4.4-.8.9-1.2 1.3-.3.3-.6.6-1 .9-.4.4-.9.8-1.4 1.1-.4.3-.7.6-1.1.8-.1.1-.3.2-.4.3L525.2 786c-4 2.7-8.6 4-13.2 4-4.7 0-9.3-1.4-13.3-4L244.6 616.9c-.1-.1-.3-.2-.4-.3l-1.1-.8c-.5-.4-.9-.7-1.3-1.1-.3-.3-.6-.6-1-.9-.4-.4-.8-.8-1.2-1.3a7 7 0 0 1-.8-1c-.4-.5-.7-1-1-1.5-.2-.4-.5-.7-.7-1.1-.3-.5-.6-1.1-.8-1.6-.2-.4-.4-.8-.5-1.2-.2-.6-.4-1.2-.6-1.7-.1-.4-.3-.8-.4-1.2-.2-.7-.3-1.3-.4-2-.1-.3-.1-.7-.2-1-.1-1-.2-2.1-.2-3.1V427.9c0-1 .1-2.1.2-3.1.1-.3.1-.7.2-1a14.16 14.16 0 0 1 .8-3.2c.2-.6.4-1.2.6-1.7.2-.4.4-.8.5-1.2.2-.5.5-1.1.8-1.6.2-.4.4-.7.7-1.1.6-.9 1.2-1.7 1.8-2.5.4-.4.8-.9 1.2-1.3.3-.3.6-.6 1-.9.4-.4.9-.8 1.3-1.1.4-.3.7-.6 1.1-.8.1-.1.3-.2.4-.3L498.7 239c8-5.3 18.5-5.3 26.5 0l254.1 169.1c.1.1.3.2.4.3l1.1.8 1.4 1.1c.3.3.6.6 1 .9.4.4.8.8 1.2 1.3.7.8 1.3 1.6 1.8 2.5.2.4.5.7.7 1.1.3.5.6 1 .8 1.6.2.4.4.8.5 1.2.2.6.4 1.2.6 1.7.1.4.3.8.4 1.2.2.7.3 1.3.4 2 .1.3.1.7.2 1 .1 1 .2 2.1.2 3.1V597zm-254.1 13.3v111.3L723.1 597l-83.6-55.8zM281.8 472.6v79.8l59.8-39.9zM512 456.1l-84.5 56.4 84.5 56.4 84.5-56.4zM723.1 428L535.9 303.4v111.3l103.6 69.1zM384.5 541.2L300.9 597l187.2 124.6V610.3l-103.6-69.1z"></path> </g></svg>
+    </a>
   </div> -->
 
 
 
-  <!-- Images of Me -->
-  <div class="w3-row-padding w3-padding-16" id="about">
-    <div class="w3-col m6">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Divesh" style="width:300px;height:300px;">
-              </div>
-              <div class="flip-card-back">
-                <h1>Divesh <br>Adivarekar</h1>
-                <p>Designer & Engineer</p>
-                <p>Games & Apps incharge</p>
-              </div>
-            </div>
-        </div>
-    </div>
-    <div class="w3-col m6">
-        <div class="flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="https://www.w3schools.com/w3images/avatar2.png" alt="Vinayak" style="width:300px;height:300px;">
-              </div>
-              <div class="flip-card-back">
-                <h1>Vinayak <br>Zugar</h1>
-                <p>Designer & Engineer</p>
-                <p>Movies & Apps incharge</p>
-              </div>
-            </div>
-        </div>
-    </div>
-  </div>
-  <br><br><br>
-  <div class="w3-container w3-padding-large" style="margin-bottom:32px">
-    <h4><b>About Me</b></h4>
-    <p>Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-    <hr>
-    
-    <h4>Technical Skills</h4>
-    <!-- Progress bars / Skills -->
-    <p>Photography</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:95%">95%</div>
-    </div>
-    <p>Web Design</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:85%">85%</div>
-    </div>
-    <p>Photoshop</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-dark-grey w3-padding w3-center" style="width:80%">80%</div>
-    </div>
-    <p>
-      <button class="w3-button w3-dark-grey w3-padding-large w3-margin-top w3-margin-bottom">
-        <i class="fa fa-download w3-margin-right"></i>Download Resume
-      </button>
-    </p>
-    <hr>
-    
-    <h4>How much I charge</h4>
-    <!-- Pricing Tables -->
-    <div class="w3-row-padding" style="margin:0 -16px">
-      <div class="w3-third w3-margin-bottom">
-        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-black w3-xlarge w3-padding-32">Basic</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">1GB Storage</li>
-          <li class="w3-padding-16">Mail Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 10</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="w3-third w3-margin-bottom">
-        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-teal w3-xlarge w3-padding-32">Pro</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">50GB Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="w3-third">
-        <ul class="w3-ul w3-border w3-white w3-center w3-opacity w3-hover-opacity-off">
-          <li class="w3-black w3-xlarge w3-padding-32">Premium</li>
-          <li class="w3-padding-16">Web Design</li>
-          <li class="w3-padding-16">Photography</li>
-          <li class="w3-padding-16">Unlimited Storage</li>
-          <li class="w3-padding-16">Endless Support</li>
-          <li class="w3-padding-16">
-            <h2>$ 25</h2>
-            <span class="w3-opacity">per month</span>
-          </li>
-          <li class="w3-light-grey w3-padding-24">
-            <button class="w3-button w3-teal w3-padding-large w3-hover-black">Sign Up</button>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  
-  <!-- Contact Section -->
-  <div class="w3-container w3-padding-large w3-grey">
-    <h4 id="contact"><b>Contact Me</b></h4>
-    <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
-        <p>email@email.com</p>
-      </div>
-      <div class="w3-third w3-teal">
-        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
-        <p>Chicago, US</p>
-      </div>
-      <div class="w3-third w3-dark-grey">
-        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
-        <p>512312311</p>
-      </div>
-    </div>
-    <hr class="w3-opacity">
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
-      </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
-      </div>
-      <button type="submit" class="w3-button w3-black w3-margin-bottom"><i class="fa fa-paper-plane w3-margin-right"></i>Send Message</button>
-    </form>
-  </div>
-
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-32 w3-dark-grey">
-  <div class="w3-row-padding">
-    <div class="w3-third">
-      <h3>FOOTER</h3>
-      <p>Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
-      <p>Powered by <a href="#home" >Point media 01</a></p>
-    </div>
-  
-    <div class="w3-third">
-      <h3>BLOG POSTS</h3>
-      <ul class="w3-ul w3-hoverable">
-        <li class="w3-padding-16">
-          <img src="/w3images/workshop.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Lorem</span><br>
-          <span>Sed mattis nunc</span>
-        </li>
-        <li class="w3-padding-16">
-          <img src="/w3images/gondol.jpg" class="w3-left w3-margin-right" style="width:50px">
-          <span class="w3-large">Ipsum</span><br>
-          <span>Praes tinci sed</span>
-        </li> 
-      </ul>
-    </div>
-
-    <div class="w3-third">
-      <h3>POPULAR TAGS</h3>
-      <p>
-        <span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">London</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">DIY</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Family</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Shopping</span>
-        <span class="w3-tag w3-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-grey w3-small w3-margin-bottom">Games</span>
-      </p>
-    </div>
-
-  </div>
-  </footer>
-  
-  <div class="w3-black w3-center w3-padding-24">Made with ❤️ by <a href="#Divesh" title="W3.CSS" class="w3-hover-opacity">Divesh</a> & 
-    <a href="#Vinayak" title="W3.CSS" class="w3-hover-opacity"> Vinayak </a></div>
-
-<!-- End page content -->
-</div>
-
-<script>
-
-
-// Script to open and close sidebar
-function w3_open() {
-    document.getElementById("mySidebar").style.display = "block";
-    document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-    document.getElementById("mySidebar").style.display = "none";
-    document.getElementById("myOverlay").style.display = "none";
-}
-</script>
-
-
-<!-- snack bar js -->
-<script>
-    function snackbar() {
-    // Get the snackbar DIV
-    var x = document.getElementById("snackbar");
-
-    // Add the "show" class to DIV
-    x.className = "show";
-
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-    }
-</script>
-
-<!-- filter js -->
-<script>
-    filterSelection("all")
-    function filterSelection(c) {
-      var x, i;
-      x = document.getElementsByClassName("column");
-      if (c == "all") c = "";
-      for (i = 0; i < x.length; i++) {
-        w3RemoveClass(x[i], "show");
-        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
-      }
-    }
-    
-    function w3AddClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-      }
-    }
-    
-    function w3RemoveClass(element, name) {
-      var i, arr1, arr2;
-      arr1 = element.className.split(" ");
-      arr2 = name.split(" ");
-      for (i = 0; i < arr2.length; i++) {
-        while (arr1.indexOf(arr2[i]) > -1) {
-          arr1.splice(arr1.indexOf(arr2[i]), 1);     
-        }
-      }
-      element.className = arr1.join(" ");
-    }
-    
-    
-    // Add active class to the current button (highlight it)
-    var btnContainer = document.getElementById("myBtnContainer");
-    var btns = btnContainer.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function(){
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-</script>
-
-
-<!-- modal js -->
-<script>
-    // Get the modal
-    var modal = document.getElementById("myModal");
-    
-    // Get the button that opens the modal
-    var btn = document.getElementById("myBtn");
-    
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-    
-    // When the user clicks the button, open the modal 
-    btn.onclick = function() {
-      modal.style.display = "block";
-    }
-    
-    // When the user clicks on <span> (x), close the modal
-    span.onclick = function() {
-      modal.style.display = "none";
-    }
-    
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-      if (event.target == modal) {
-        modal.style.display = "none";
-      }
-    }
-</script>
-    
-
-<!-- progress bar js -->
-<script>
-    // When the user scrolls the page, execute myFunction 
-    window.onscroll = function() {myFunction()};
-    
-    function myFunction() {
-      var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-      var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-      var scrolled = (winScroll / height) * 100;
-      document.getElementById("myBar").style.width = scrolled + "%";
-    }
-</script>
-    
-
-
-<!-- slideshow js -->
-<script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-    
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-    
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-    
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-</script>
-
+  <!-- javascript files here -->
+  <script src="javascript/search.js"></script>
+  <script src="javascript/darkmode.js"></script>
+  <script src="javascript/snackbar.js"></script>
+  <script src="javascript/loader.js"></script>
+  <script src="javascript/cookie.js"></script>
+  <script src="javascript/network.js"></script>
 
 </body>
+
 </html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="media/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="media/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="media/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="media/favicon_io/site.webmanifest" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/utils.css" />
+    <link rel="stylesheet" href="css/snack.css" />
+    <link rel="stylesheet" href="css/loader.css" />
+    <link rel="stylesheet" href="css/cookie.css" />
+    <link rel="stylesheet" href="css/social.css" />
+    <link rel="stylesheet" href="css/goku.css" />
+    <link rel="stylesheet" href="css/stars.css" />
+
+    <script
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8027026058295687"
+      crossorigin="anonymous"
+    ></script>
+
+    <style></style>
+    <title>Point Media</title>
+  </head>
+
+  <body>
+    <!-- Made with ❤️ by Divesh and Vinayak -->
+
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+    <div class="firefly"></div>
+
+    <div id="loader">
+      <div
+        aria-label="Orange and tan hamster running in a metal wheel"
+        role="img"
+        class="wheel-and-hamster"
+      >
+        <div class="wheel"></div>
+        <div class="hamster">
+          <div class="hamster__body">
+            <div class="hamster__head">
+              <div class="hamster__ear"></div>
+              <div class="hamster__eye"></div>
+              <div class="hamster__nose"></div>
+            </div>
+            <div class="hamster__limb hamster__limb--fr"></div>
+            <div class="hamster__limb hamster__limb--fl"></div>
+            <div class="hamster__limb hamster__limb--br"></div>
+            <div class="hamster__limb hamster__limb--bl"></div>
+            <div class="hamster__tail"></div>
+          </div>
+        </div>
+        <div class="spoke"></div>
+      </div>
+    </div>
+
+    <div id="content">
+      <!-- The actual snackbar -->
+      <div id="snackbar">Downloading....</div>
+
+      <!-- copy password button -->
+      <button id="copyButton">Copy zip password</button>
+
+      <!-- darkmode toggle switch -->
+      <div class="sun" onclick="toggleDarkMode()"></div>
+      <div class="moon" onclick="toggleDarkMode()"></div>
+
+      <!-- pointmedia logo and heading -->
+      <div id="logo" class="logo">
+        <img id="my-image" src="media/PM_LOGO.png" alt="pointmedia_logo" />
+      </div>
+
+      <h3 align="center" style="font-size: medium">
+        Developed by Divesh and Vinayak
+      </h3>
+
+      <!-- search bar and result container  -->
+      <div class="search-container">
+        <input
+          type="text"
+          autocomplete="off"
+          name="text"
+          class="input search-input"
+          placeholder="Search on Point Media"
+          id="searchInput"
+        />
+        <button class="search-button" id="searchButton">Search</button>
+      </div>
+      <div id="results" align="center"></div>
+
+      <!-- cookie card code here  -->
+      <div id="cook_card" class="cookie-card cookcard">
+        <span class="title">🍪 Cookie Notice</span>
+        <p class="description">
+          We use cookies to ensure that we give you the best experience on our
+          website.
+          <a href="https://diveshwebsite.000webhostapp.com/"
+            >Read cookies policies</a
+          >.
+        </p>
+        <div class="actions">
+          <button class="pref" style="visibility: hidden"></button>
+          <button onclick="accept()" class="accept" id="accept">Accept</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="notification">
+      <div id="goku">
+        <div class="head"></div>
+        <div class="body"></div>
+        <div class="leg"></div>
+        <div class="shadow"></div>
+      </div>
+
+      <span class="dirt">
+        <div class="text">
+          <span class="font hover"><b>Pointmedia</b></span>
+          <span class="font-text hover">Your power:</span>
+          <span class="font-power hover">
+            <p style="font-size: 10px" id="result"></p>
+          </span>
+        </div>
+        <div class="parchment"></div>
+      </span>
+    </div>
+
+    <!-- javascript files here -->
+    <script src="javascript/search.js"></script>
+    <script src="javascript/darkmode.js"></script>
+    <script src="javascript/snackbar.js"></script>
+    <script src="javascript/loader.js"></script>
+    <script src="javascript/cookie.js"></script>
+    <script src="javascript/network.js"></script>
+    <script src="javascript/copy.js"></script>
+  </body>
+</html>

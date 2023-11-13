@@ -1,0 +1,47 @@
+/* css for dark mode switch */
+.sun {
+  display: inline-block;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url("../media/moon.png");
+  background-size: cover;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+  z-index: 100;
+}
+.moon {
+  display: none;
+  position: fixed;
+  top: 10px;
+  right: 15px;
+  height: 2.5rem;
+  width: 2.5rem;
+  background-image: url("../media/sun.png");
+  background-size: cover;
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+  z-index: 100;
+}
+
+.dark-mode .sun {
+  display: none;
+}
+.dark-mode .moon {
+  display: inline-block;
+}
+
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+  transition: background-color 0.5s ease;
+}
+
+/* css for the body */
+body {
+  background-color: rgb(236, 236, 236);
+  color: #333;
+  transition: background-color 0.5s ease;
+}

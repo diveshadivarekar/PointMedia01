@@ -12,6 +12,5 @@ acceptCookie.addEventListener("click", () => {
 
 // Check if the cookie has been accepted
 if (document.cookie.includes("cookie-accepted=true")) {
-  // console.log("cookie status : true")
   cookieBanner.remove();
 }

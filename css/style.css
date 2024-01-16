@@ -51,6 +51,8 @@ body.dark-mode #copyButton {
   display: flex;
   align-items: center;
   padding: 20px;
+  max-width: 574px;
+  margin: 0 auto;
 }
 .search-input {
   width: 70%;
